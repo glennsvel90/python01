@@ -3,7 +3,7 @@ fh=open(fname)
 
 mlist=list()
 
-for line in fh
+for line in fh:
 	if line.startswith("From: "):
 		e=line.find(" ")
 		rest=line[e+1:]
@@ -16,7 +16,7 @@ for word in mlist:
 mcword=None
 mccount=None
 for word,count in purse.items():
-	if mmcount is None or count>mmcount
+	if mccount is None or count > mccount:
 		mcword=word
 		mccount=count
 
