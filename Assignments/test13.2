@@ -1,0 +1,21 @@
+
+
+import urllib
+from BeautifulSoup import *
+
+url=raw_input("Enter - ")
+html=urllib.urlopen(url).read()
+soup=BeautifulSoup(html)
+
+#using beaurful spoup to ofind all tags with span
+splst = soup('span')
+numlst = []
+#get text in span and convert to integers
+for i in splst:
+	num=int(i.text)
+	numlst.append(num)
+
+#summing the number
+
+print sum(numlst)
+

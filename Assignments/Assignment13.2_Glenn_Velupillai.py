@@ -1,23 +1,23 @@
 import urllib
 from BeautifulSoup import *
 
-url=raw_input("Enter - ")
-count=raw_input("Enter Count: ")
+url = raw_input("Enter - ")
+count = raw_input("count: ")
+position = raw_input("Position: ")
 
-position=raw_input("Enter position: ")
+count = int(count)
+position = int(position)
 
-for i in range(1, int(count)):
 
-	html=urllib.urlopen(url).read()
+while count > 0:
+  
+    page = urllib.urlopen(url)
+    soup = BeautifulSoup(page)
+    anchors = soup('a')
+    
+    url = anchors[position-1]['href']
+    count =count- 1
 
-	soup=BeautifulSoup(html)
-
-#using beaurful spoup to ofind all tags with span
-	namlst = soup('a')
-	url=namlst[int(position)-1]
-	print url
-
-print "done", url
-
+print url
 
 
