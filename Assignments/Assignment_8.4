@@ -1,0 +1,33 @@
+Hello Fellows!
+
+#Open the file romeo.txt 
+
+#read it line by line. 
+
+# For each line, split the line into a list of words 
+
+Begin to write the program with the following code below:
+fname = raw_input("Enter file name: ")
+fh = open(fname)
+lst = list()
+for line in fh:
+	lst=line.rstrip().split()
+
+	for word in lst:
+		if word not in lst:
+			lst.append(word)
+
+
+print lst
+
+
+# For each word on each line check to see if the word is 
+# already in the list and if not append it to the list.
+
+
+
+
+# When the program completes, sort and print the 
+# resulting words in alphabetical order.
+
+

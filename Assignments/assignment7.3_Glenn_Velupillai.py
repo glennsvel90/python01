@@ -1,21 +1,23 @@
-file_name=raw_input("Enter file name: ")
-fh=open('mbox-short.txt')
+fh=open("mbox-short.txt")
 numl=[]
-count=0
-sum=0
+
 for line in fh:
+	line = line.strip()
+	if line.startswith("X-DSPAM-Confidence:"):
+		decimal=line.find(".")
+		number=line[decimal:]
+		number=float(number)
+		numl.append(number)
 
-	line= "mbox-short.txt".find(".")
-	n=float(line)
-
+<<<<<<< HEAD
 	number = float(line[line+1:])
+=======
+>>>>>>> ee8ef3d17efb8a8bb54fa6829aa4f1dacec6b6ac
 
-	put=type(number)
-	numl.append(put)
-print "Before", count, sum
+count = 0
+sumof = 0
 for value in numl:
 	count =count+1
-	sum= sum+value
-	print count, sum, value
-print "After", count, sum, sum / count
+	sumof= sumof +value
+print sumof / count
 
