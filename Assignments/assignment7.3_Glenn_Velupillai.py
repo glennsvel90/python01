@@ -8,7 +8,7 @@ for line in fh:
 	line= "mbox-short.txt".find(".")
 	n=float(line)
 
-	number = float("mbox-short"[line:])
+	number = float(line[line+1:])
 
 	put=type(number)
 	numl.append(put)
