@@ -19,7 +19,7 @@ for line in fh:
     email = pieces[1]
     print email
     at_index=email.find('@')
-    org=email[at_index+1]
+    org=email[at_index+1:]
     cur.execute('SELECT count FROM Counts WHERE org = ? ', (org, ))
     row = cur.fetchone()
     if row is None:
