@@ -1,4 +1,4 @@
-Help for this open-source project was through www.py4inf.com/code/geodata.zip
+Structure for this open-source project was through www.py4inf.com/code/geodata.zip
 
 Creating a map of food pantries in the South Bronx
 using the Google Geocoding API with a SQLite3 Database
